@@ -5,10 +5,18 @@
 dotnet --help
 ```
 
+## Create new solution (group of proyek)
+```
+dotnet "new" "sln" "-n" "Testing" "-o" "d:\PROJECT\RESEARCH\dotnetcore\Testing"
+```
+
 ## Create new API project
 ``` 
 dotnet new webapi -o TodoApi
 ```
+
+## Add proyek ke solution
+dotnet "sln" "d:\PROJECT\RESEARCH\dotnetcore\Testing\Testing.sln" "add" "d:\PROJECT\RESEARCH\dotnetcore\Testing\TodoApi\TodoApi.csproj"
 
 ## Build Project
 ```
