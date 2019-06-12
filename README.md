@@ -39,3 +39,8 @@ dotnet publish -c Release -o ./publish
 ```
 selanjutnya copy ke IIS
 
+## Migration
+```
+dotnet ef migrations add addNIP -c TodoContext -o Migrations\TodoDB
+dotnet ef database update
+```
