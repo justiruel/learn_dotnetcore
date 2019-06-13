@@ -3,7 +3,7 @@
 - fk
 - unique
 - index
-- constrain
+- constraint
 
 ## appsettings.json
 ```
