@@ -16,7 +16,9 @@ dotnet new webapi -o TodoApi
 ```
 
 ## Add proyek ke solution
+```
 dotnet "sln" "d:\PROJECT\RESEARCH\dotnetcore\Testing\Testing.sln" "add" "d:\PROJECT\RESEARCH\dotnetcore\Testing\TodoApi\TodoApi.csproj"
+```
 
 ## Build Project
 ```
@@ -27,7 +29,10 @@ dotnet build
 ```
 dotnet run
 ``` 
-
+## Add package nugget
+```
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.0.1
+```
 ## dotnet restore (sama dengan npm install, dipergunakan jika library sudah tercatat di .csproj)
 ```
 dotnet restore
