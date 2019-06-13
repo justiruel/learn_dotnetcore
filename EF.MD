@@ -5,6 +5,11 @@
 - index
 - constraint
 
+## Add package
+```
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.0.1
+```
+
 ## appsettings.json
 ```
 "ConnectionStrings": {
