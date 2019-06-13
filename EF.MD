@@ -1,5 +1,10 @@
 # Mysql EF
 
+- fk
+- unique
+- index
+- constrain
+
 ## appsettings.json
 ```
 "ConnectionStrings": {
