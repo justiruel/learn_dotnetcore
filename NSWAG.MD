@@ -17,6 +17,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 {
+    ....
     app.UseSwagger();
     app.UseSwaggerUi3();
 }
