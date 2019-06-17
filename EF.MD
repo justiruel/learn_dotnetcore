@@ -7,7 +7,7 @@
 
 ## Add package
 ```
-dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.0.1
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.1.4
 ```
 
 ## appsettings.json
