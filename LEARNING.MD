@@ -44,3 +44,7 @@ maka table identity akan tercipta
 - mqtt
 - hangover
 - regex
+- middleware
+- logger
+- repository design pattern
+- razor
