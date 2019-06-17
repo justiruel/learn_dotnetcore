@@ -46,5 +46,5 @@ maka table identity akan tercipta
 - regex
 - middleware
 - logger
-- repository design pattern
+- repository design pattern (https://dotnettutorials.net/lesson/basic-repository-pattern-csharp/)
 - razor
