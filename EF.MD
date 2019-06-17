@@ -120,3 +120,75 @@ namespace Mysql.Controllers
 }
 
 ```
+
+# Repository Design pattern
+
+## Startup.cs
+```
+ public void ConfigureServices(IServiceCollection services)
+{
+    ....
+    services.AddScoped<IGuruRepository, GuruRepository>();
+}
+```
+
+## IGuruRepository.cs
+```
+namespace RepositoryUsingEFinMVC.Repository
+{
+    public interface IGuruRepository
+    {
+        Task<ActionResult<IEnumerable<Guru>>> GetAll();
+    }
+}
+```
+
+## GuruRepository.cs
+```
+namespace RepositoryUsingEFinMVC.Repository
+{
+    public class GuruRepository : IGuruRepository
+    {
+        private readonly TodoContext _context;
+        public GuruRepository(TodoContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<ActionResult<IEnumerable<Guru>>> GetAll()
+        {
+            return await _context.guru.ToListAsync();
+        }
+
+        public string halo()
+        {
+            return "naruto";
+        }
+    }
+}
+```
+
+## ValuesController.cs
+```
+namespace RepositoryUsingEFinMVC.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ValuesController : ControllerBase
+    {
+        private IGuruRepository _guruRepository;
+        public ValuesController(IGuruRepository guruRepository)
+        {
+            _guruRepository = guruRepository;
+        }
+        
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Guru>>> GetSiswa()
+        {
+            return await  _guruRepository.GetAll();
+        }
+    }
+}
+```
+
+
