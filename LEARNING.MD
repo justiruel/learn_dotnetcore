@@ -44,7 +44,7 @@ maka table identity akan tercipta
 - mqtt
 - hangover
 - regex
-- middleware
+- middleware (https://dotnetcoretutorials.com/2017/03/10/creating-custom-middleware-asp-net-core/)
 - logger
 - repository design pattern (https://dotnettutorials.net/lesson/basic-repository-pattern-csharp/)
 - razor
