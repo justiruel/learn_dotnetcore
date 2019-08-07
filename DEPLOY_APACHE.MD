@@ -52,7 +52,15 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env)
 dotnet build
 
 dotnet run
+```
+or publish
+```
+dotnet publish --configuration Release
+dotnet webapp.dll
+```
 
+- Jalankan
+```
 apt-get install apache2
 
 cd /etc/apache2/sites-available/
