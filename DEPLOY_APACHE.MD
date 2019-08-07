@@ -56,6 +56,9 @@ dotnet run
 or publish
 ```
 dotnet publish --configuration Release
+
+cd webapp/bin/Release/netcoreapp2.2/publish
+
 dotnet webapp.dll
 ```
 
