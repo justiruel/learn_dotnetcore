@@ -60,6 +60,8 @@ dotnet publish --configuration Release
 cd webapp/bin/Release/netcoreapp2.2/publish
 
 dotnet webapp.dll
+
+folder publish dapat disimpan di folder apapun
 ```
 
 - Jalankan
