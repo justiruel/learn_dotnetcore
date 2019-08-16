@@ -49,7 +49,7 @@ selanjutnya copy ke IIS
 
 ## run published project
 ```
-dotnet <nama_project>.dll
+dotnet  <nama_project>.dll
 ```
 
 ## Migration
