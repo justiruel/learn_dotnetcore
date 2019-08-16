@@ -28,11 +28,13 @@ dotnet build
 ## Jalankan project
 ```
 dotnet run
-``` 
+```
+
 ## Add package nugget
 ```
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 2.0.1
 ```
+
 ## dotnet restore (sama dengan npm install, dipergunakan jika library sudah tercatat di .csproj)
 ```
 dotnet restore
@@ -43,6 +45,12 @@ dotnet restore
 dotnet publish -c Release -o ./publish
 ```
 selanjutnya copy ke IIS
+
+
+## run published project
+```
+<nama_project>.dll
+```
 
 ## Migration
 ```
