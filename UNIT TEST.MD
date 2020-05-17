@@ -9,9 +9,11 @@ xunit.runner.console
 - copy this to method test
 ```
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using Xunit;
 /*
- * https://www.youtube.com/watch?v=ub3P8c87cwk&t=796s
+ https://docs.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-with-aspnet-web-api
+ https://www.youtube.com/watch?v=ub3P8c87cwk&t=796s
 https://www.c-sharpcorner.com/article/a-basic-introduction-of-unit-test-for-beginners/
 The motto of Test-Driven Development is Red, Green, Refactor.
 Red: Create a test and make it fail.
@@ -23,10 +25,10 @@ namespace ConsoleApp2.Tests
     public class ClassTestTests
     {
         [Theory]
-        [Trait("Category", "Unit")]
+        [Trait("Category", "Unit1")]
         [InlineData(0, "Hello A")]
         [InlineData(1, "Hello B")]
-        public void SayHiTest(int input1,string expected)
+        public void SayHiTest(int input1, string expected)
         {
             // Arrange
             ClassTest account = new ClassTest();
@@ -41,6 +43,33 @@ namespace ConsoleApp2.Tests
 
             //cara lain
             //Assert.Contains("hello".ToLower(), actual.ToLower());
+        }
+
+        [Fact]
+        [Trait("Category", "Unit2")]
+        public void ReturnObjectTest()
+        {
+            // Arrange
+            ClassTest account = new ClassTest();
+            string expected;
+            string actual1;
+            bool actual2;
+
+
+            // Act
+            var jsonResult = account.ReturnObject(1);
+            var dynData = JsonConvert.DeserializeObject<dynamic>(jsonResult);
+            expected = "coba 1";
+            actual1 = (string)dynData.FullName;
+            actual2 = (bool)dynData.TimerStatus;
+
+            // Assert
+            Assert.Equal(expected, actual1);
+            Assert.True(actual2);
+
+            //Assert.Equal(expected, actual);
+            //Assert.IsTrue((bool)dynData.ok);
+
         }
     }
 }
